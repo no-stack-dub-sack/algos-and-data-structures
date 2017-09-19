@@ -1,13 +1,13 @@
-import LinkedList from './data-structures/LinkedList';
-import Quicksort from './algorithms/Quicksort';
-import InsertionSort from './algorithms/InsertionSort';
-import SelectionSort from './algorithms/SelectionSort';
-import BubbleSort from './algorithms/BubbleSort';
-import Mergesort from './algorithms/Mergesort';
-import AnagramPalindrome from './algorithms/AnagramPalindrome';
-import SortingBenchmarks from './algorithms/SortingBenchmarks';
+import LinkedList from './src/data-structures/LinkedList';
+import Quicksort from './src/algorithms/Quicksort';
+import InsertionSort from './src/algorithms/InsertionSort';
+import SelectionSort from './src/algorithms/SelectionSort';
+import BubbleSort from './src/algorithms/BubbleSort';
+import Mergesort from './src/algorithms/Mergesort';
+import AnagramPalindrome from './src/algorithms/AnagramPalindrome';
+import SortingBenchmarks from './src/algorithms/SortingBenchmarks';
 
-import hijackConsole from './utils/hijackConsole';
+import hijackConsole from './src/utils/hijackConsole';
 
 const CODE = {
   LinkedList,
