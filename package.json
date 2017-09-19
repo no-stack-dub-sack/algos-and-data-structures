@@ -1,0 +1,16 @@
+{
+  "name": "algos-and-data-structures",
+  "version": "1.0.0",
+  "description": "classic computer science algorithms and data structures, along with some other fun algorithm challenges",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch --config webpack.config.dev.js"
+  },
+  "author": "Peter A. Weinberg",
+  "license": "ISC",
+  "dependencies": {
+    "codemirror": "^5.29.0",
+    "webpack": "^3.6.0"
+  }
+}

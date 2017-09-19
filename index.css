@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 400px;
+  box-sizing: border-box;
+  border: 2px solid black;
+  height: 100vh;
+}
+
+.sidebar--menu {
+  height: calc(100% - 200px);
+  overflow-y: auto;
+}
+
+.sidebar--menu--header {
+  cursor: default;
+  text-align: center;
+}
+
+.sidebar--menu--header,
+.sidebar--menu--sub-header,
+.sidebar--menu--detail {
+  cursor: pointer;
+  border: 1px solid black;
+  outline: none;
+}
+
+.sidebar--menu:last-child {
+  border: 2px solid black;
+}
+
+.sidebar--menu--header,
+.sidebar--menu--sub-header {
+  font-size: 20px;
+  padding: 2px 0 2px 10px;
+}
+
+.sidebar--menu--sub-header.sub,
+.sidebar--menu--detail.sub {
+  padding-left: 30px;
+}
+
+.sidebar--menu--detail {
+  font-size: 16px;
+  padding: 5px;
+  margin: 0;
+}
+
+.sidebar--output {
+  height: 200px;
+  margin: 0;
+}
+
+.sidebar--output--messages {
+  box-sizing: border-box;
+  height: 100%;
+  border: 2px solid rgb(14, 115, 45);
+  background: rgb(27, 29, 26);
+  color: rgb(7, 187, 4);
+  font-family: monospace;
+  overflow-y: auto;
+}
+
+.sidebar--output--messages--message {
+  margin: 0;
+  padding: 5px 0 0 8px;
+}
+
+.sidebar--output--message:last-of-type {
+  padding-bottom: 5px;
+}
+
+.sidebar--output--messages--default-message {
+  margin: 0;
+  padding: 5px 0 0 8px;
+  color: rgb(120, 117, 119);
+}
+
+.main {
+  position: absolute;
+  right: 0;
+  width: calc(100vw - 400px);
+  height: 100vh;
+}
+
+.main--controls {
+  height: 50px;
+}
+
+.main--controls--button {
+  display: inline-block;
+  box-sizing: border-box;;
+  border: 2px solid black;
+  border-right: none;
+  background: rgb(138, 131, 230);
+  color: rgb(51, 43, 57);
+  height: 100%;
+  margin: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.main--controls--button.run-code {
+  border-left: none;
+  width: 50%;
+}
+
+.main--controls--button.next,
+.main--controls--button.previous {
+  width: 25%;
+}
+
+.main--controls--button.next {
+  border-right: 2px solid black;
+}
+
+.CodeMirror {
+  height: calc(100vh - 50px);
+  margin: none;
+}

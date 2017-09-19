@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Algorithms & Data Structures</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/theme/monokai.min.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/fold/foldgutter.min.css" />
+      <link rel="stylesheet" href="./index.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/javascript/javascript.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/edit/matchbrackets.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/edit/closebrackets.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/comment/comment.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/fold/foldcode.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/fold/foldgutter.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/fold/brace-fold.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/addon/fold/comment-fold.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.29.0/keymap/sublime.min.js"></script>
+  </head>
+  <body>
+
+  <aside class="sidebar">
+    <section class="sidebar--menu">
+      <header class="sidebar--menu--header">Contents</header>
+      <details open>
+        <summary class="sidebar--menu--sub-header">Sorting Algorithms</summary>
+        <p id="Quicksort" class="sidebar--menu--detail">Quicksort</p>
+        <p id="Mergesort" class="sidebar--menu--detail">Mergesort</p>
+        <p id="SelectionSort" class="sidebar--menu--detail">Selection Sort</p>
+        <p id="InsertionSort" class="sidebar--menu--detail">Insertion Sort</p>
+        <p id="BubbleSort" class="sidebar--menu--detail">Bubble Sort</p>
+        <!-- <p id="HeapSort" class="sidebar--menu--detail">Heap Sort</p> -->
+        <p id="SortingBenchmarks" class="sidebar--menu--detail">Sorting Algorithm Benchmarks</p>
+      </details>
+      <details open>
+        <summary class="sidebar--menu--sub-header">Data Structures</summary>
+        <p id="LinkedList" class="sidebar--menu--detail">Linked List</p>
+        <!-- <p id="DoublyLinkedList" class="sidebar--menu--detail">Doubly-Linked List</p>
+        <p id="Stack" class="sidebar--menu--detail">Stack</p>
+        <p id="Queue" class="sidebar--menu--detail">Queue</p>
+        <p id="Tree" class="sidebar--menu--detail">Tree</p>
+        <p id="BinaryTree" class="sidebar--menu--detail">Binary Tree</p> -->
+      </details>
+      <details open>
+        <summary class="sidebar--menu--sub-header">Algorithm Challenges</summary>
+        <details open>
+          <summary class="sidebar--menu--sub-header sub">Easy</summary>
+          <!-- <p id="SumAllPrimes" class="sidebar--menu--detail sub">Sum All Primes</p>
+          <p id="IsPalindrome" class="sidebar--menu--detail sub">Is Palindrome</p>
+          <p id="FizzBuzz" class="sidebar--menu--detail sub">Fizz Buzz</p> -->
+        </details>
+        <details open>
+          <summary class="sidebar--menu--sub-header sub">Moderate</summary>
+          <!-- <p id="NoTwoConsecutiveChars" class="sidebar--menu--detail sub">No Two Consecutive Chars</p>
+          <p id="SumPrimeFactors" class="sidebar--menu--detail sub">Sum Prime Factors</p>
+          <p id="AnagramPalindrome" class="sidebar--menu--detail sub">Anagram Palindrome</p>
+          <p id="RotateAnImage" class="sidebar--menu--detail sub">Rotate An Image</p>
+          <p id="SumPrimeFactors" class="sidebar--menu--detail sub">Sum Prime Factors</p> -->
+          <p id="AnagramPalindrome" class="sidebar--menu--detail sub">Anagram Palindrome</p>
+          <!-- <p id="RotateAnImage" class="sidebar--menu--detail sub">Rotate An Image</p> -->
+        </details>
+      </details>
+    </section>
+    <section id="output-container" class="sidebar--output">
+      <div id="output" class="sidebar--output--messages">
+        <p class="sidebar--output--messages--default-message">// console output:</p>
+      </div>
+    </section>
+  </aside>
+  <main class="main">
+    <textarea id="editor" class="main--editor"></textarea>
+    <section class="main--controls">
+      <button id="run-code" class="main--controls--button run-code">Run Code</button
+      ><button id="previous" class="main--controls--button previous">Previous</button
+      ><button id="next" class="main--controls--button next">Next</button>
+    </section>
+  </main>
+  <script type="text/javascript" src="./build/bundle.js" />
+  </body>
+</html>
