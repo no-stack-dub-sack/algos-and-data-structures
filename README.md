@@ -28,6 +28,7 @@ This project uses [CodeMirror](https://codemirror.net/) to embed an editor into 
 - Sum All Primes _(coming soon)_
 - Is Palindrome _(coming soon)_
 - Fizz Buzz _(coming soon)_
+
 **Moderate/Difficult:**
 - No Two Consecutive Chars _(coming soon)_
 - Sum Prime Factors _(coming soon)_
@@ -41,8 +42,7 @@ This project uses [CodeMirror](https://codemirror.net/) to embed an editor into 
 - Install the [live-server](https://github.com/tapio/live-server) package globally
 - In the root directory, run `yarn start` or `npm start`
 - In a new console tab, in the same directory, run `live-server`, which should launch the app on port 8080
+- **\*I will be launching this live soon, once it's complete**
 
-**\*I will be launching this live soon, once it's complete**
-
-### \*\*_Challenge!_
+## \*\*_Challenge!_
 Some of my solutions are less than perfect. If you come up with a better one, or want to add a new algorithm or data structure that I haven't covered, feel free to submit a PR!
