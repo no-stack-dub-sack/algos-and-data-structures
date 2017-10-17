@@ -37,7 +37,7 @@ This project uses [CodeMirror](https://codemirror.net/) to embed an editor into 
 - Sum Prime Factors _(coming soon)_
 - Anagram Palindrome _(coming soon)_
 
-## To Install:
+## To Install/Run:
 - Fork repo, clone locally, and run `npm install` or `yarn install`
 - Install the [live-server](https://github.com/tapio/live-server) package globally
 - In the root directory, run `yarn start` or `npm start`

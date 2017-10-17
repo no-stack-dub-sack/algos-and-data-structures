@@ -36,28 +36,13 @@ class LinkedList {
     }
 
 
-    indexOutOfScope(index) {
-        if (index < 0 || index >= this.size)
-        {
-            return true;
-        }
-
-        return false;
-    }
-
-
     add(el) {
         var next = new Node(el);
         var currentNode = this.headNode;
-        if (!currentNode)
-        {
+        if (!currentNode) {
             this.headNode = next;
-        }
-
-        else
-        {
-            while (currentNode.next)
-            {
+        } else {
+            while (currentNode.next) {
                 currentNode = currentNode.next;
             }
 
@@ -69,24 +54,18 @@ class LinkedList {
 
 
     addAt(index, el) {
-        if (this.indexOutOfScope(index))
-        {
-            return false;
+        if (index < 0 || index >= this.size) {
+            return null;
         }
 
         var currentNode = this.headNode, previousNode;
         var currentIndex = 0;
         var next = new Node(el);
-        if (index === 0)
-        {
+        if (index === 0) {
             next.next = this.headNode;
             this.headNode = next;
-        }
-
-        else
-        {
-            while (currentIndex < index)
-            {
+        } else {
+            while (currentIndex < index) {
                 previousNode = currentNode;
                 currentNode = currentNode.next;
                 currentIndex++;
@@ -104,15 +83,10 @@ class LinkedList {
     remove(el) {
         var currentNode = this.headNode, previousNode;
 
-        if (currentNode.el === el)
-        {
+        if (currentNode.el === el) {
             this.headNode = currentNode.next;
-        }
-
-        else
-        {
-            while (currentNode.el !== el)
-            {
+        } else {
+            while (currentNode.el !== el) {
                 previousNode = currentNode;
                 currentNode = currentNode.next;
             }
@@ -125,8 +99,7 @@ class LinkedList {
 
 
     removeAt(index) {
-        if (this.indexOutOfScope(index))
-        {
+        if (index < 0 || index >= this.size) {
             return null;
         }
 
@@ -138,12 +111,8 @@ class LinkedList {
             previousNode = this.headNode;
             this.headNode = currentNode.next;
             return previousNode.el;
-        }
-
-        else
-        {
-            while (currentIndex < index)
-            {
+        } else {
+            while (currentIndex < index) {
                 previousNode = currentNode;
                 currentNode = currentNode.next;
                 currentIndex++;
@@ -160,10 +129,8 @@ class LinkedList {
         var currentNode = this.headNode;
         if (!currentNode) return -1;
 
-        while (el !== currentNode.el)
-        {
-            if (currentNode.next === null)
-            {
+        while (el !== currentNode.el) {
+            if (currentNode.next === null) {
                 return -1;
             }
             currentNode = currentNode.next;
@@ -175,16 +142,14 @@ class LinkedList {
 
 
     elementAt(index) {
-        if (this.indexOutOfScope(index))
-        {
+        if (index < 0 || index >= this.size) {
             return null;
         }
 
         var currentIndex = 0;
         var currentNode = this.headNode;
 
-        while (currentIndex < index)
-        {
+        while (currentIndex < index) {
             currentNode = currentNode.next;
             currentIndex++;
         }
@@ -194,8 +159,7 @@ class LinkedList {
 
 
     isEmpty(num) {
-        if (!this.headNode)
-        {
+        if (!this.headNode) {
            return true;
         }
 
@@ -210,8 +174,8 @@ list.add('Planes');
 list.add('Trains');
 list.add('Automobiles');
 list.add('Magic Carpets');
-console.log(list.head());
-console.log(list.indexOf('Trains'));
-console.log(list.indexOf('Trucks'));
-console.log(list.size);
+console.log(JSON.stringify(list.head(), null, 2));
+console.log(\`indexOf trains: \${list.indexOf('Trains')}\`);
+console.log(\`indexOf trucks: \${list.indexOf('Trucks')}\`);
+console.log(\`size: \${list.size}\`);
 `;

@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --watch --config webpack.config.dev.js"
+    "build": "webpack --watch",
+    "start": "live-server --open=src/"
   },
   "author": "Peter A. Weinberg",
   "license": "ISC",
   "dependencies": {
-    "codemirror": "^5.29.0",
-    "webpack": "^3.6.0"
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.8.2"
   }
 }
