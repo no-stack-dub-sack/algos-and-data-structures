@@ -1,18 +1,13 @@
 export default
-`// queue helper class node
+`/** Binary Search Tree with the following functionality:
+        *
+*/
+
+// queue helper class node
 class QNode {
     constructor(val) {
         this.value = val;
         this.next = null;
-    }
-}
-
-// binary search tree node
-class Node {
-    constructor(value) {
-        this.value = value;
-        this.left = null;
-        this.right = null;
     }
 }
 
@@ -57,9 +52,13 @@ class Queue {
 
 var q = new Queue();
 
-/** Binary Search Tree with the following functionality:
-      *
- */
+class Node {
+    constructor(value) {
+        this.value = value;
+        this.left = null;
+        this.right = null;
+    }
+}
 
 class BinarySearchTree {
     constructor() {
@@ -376,6 +375,20 @@ class BinarySearchTree {
             parent: null
         };
     }
+
+
+    invert(node = this.root) {
+        if (!node) {
+            return null;
+        }
+
+        var tempNode = node.left;
+        node.left = node.right;
+        node.right = tempNode;
+
+        this.invert(node.left);
+        this.invert(node.right);
+    }
 }
 
 var tree = new BinarySearchTree();
@@ -384,21 +397,8 @@ var tree = new BinarySearchTree();
  * Tests
  */
 
-tree.add(20);
-tree.add(9);
-tree.add(49);
-tree.add(5);
-tree.add(23);
-tree.add(52);
-tree.add(15);
-tree.add(50);
-tree.add(17);
-tree.add(18);
-tree.add(16);
-tree.add(13);
-tree.add(10);
-tree.add(11);
-tree.add(12);
+ const vals = [20,9,49,5,23,52,15,50,17,18,16,13,10,11,12];
+ vals.forEach(val => tree.add(val));
 
 console.log(\`findMax: \${tree.findMax()}\`);
 console.log(\`findMin: \${tree.findMin()}\`);
@@ -407,11 +407,11 @@ console.log(\`isPresent: \${tree.isPresent(4)}\`);
 console.log(\`maxHeight: \${tree.findMaxHeight()}\`);
 console.log(\`minHeight: \${tree.findMinHeight()}\`);
 console.log(\`isBalanced: \${tree.isBalanced()}\`);
-console.log(\`inorder: \${tree.inOrder()}\`);
-console.log(\`preorder: \${tree.preOrder()}\`);
-console.log(\`postorder: \${tree.postOrder()}\`);
-console.log(\`levelOrder: \${tree.levelOrder()}\`);
-console.log(\`reverseLevelOrder: \${tree.levelOrder()}\`);
+console.log(\`inorder: \${JSON.stringify(tree.inOrder())}\`);
+console.log(\`preorder: \${JSON.stringify(tree.preOrder())}\`);
+console.log(\`postorder: \${JSON.stringify(tree.postOrder())}\`);
+console.log(\`levelOrder: \${JSON.stringify(tree.levelOrder())}\`);
+console.log(\`reverseLevelOrder: \${JSON.stringify(tree.reverseLevelOrder())}\`);
 
 console.log('\\nbefore deletion:\\n')
 console.log(JSON.stringify(tree, null, 2));
@@ -420,6 +420,8 @@ tree.remove(50); // remove leaf node
 tree.remove(13); // remove node w/ one child
 tree.remove(9); // remove node w/ two children
 
-console.log('\\nafter deletion:\\n')
+tree.invert();
+
+console.log('\\nafter deletion and inversion:\\n');
 console.log(JSON.stringify(tree, null, 2));
 `;

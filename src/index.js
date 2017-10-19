@@ -9,6 +9,7 @@ import SortingBenchmarks from './algorithms/SortingBenchmarks';
 import LinkedList from './data-structures/LinkedList';
 import Queue from './data-structures/Queue';
 import BinarySearchTree from './data-structures/BinarySearchTree';
+import MaxHeap from './data-structures/MaxHeap';
 
 import runCode from './utils/runCode';
 import editor from './utils/editorConfig';
@@ -31,7 +32,8 @@ export const CODE = {
   SortingBenchmarks,
   LinkedList,
   Queue,
-  BinarySearchTree
+  BinarySearchTree,
+  MaxHeap
 };
 
 // INITIALIZE APP
@@ -58,6 +60,12 @@ selectors.forEach(selector => {
   selector.addEventListener('click', function(e) {
     editor.setValue(CODE[e.target.id]);
     setCurrentNode(e.target.id);
+
+    // fold binary search tree helpers by default
+    if (currentNode === 'BinarySearchTree') {
+        editor.foldCode(5);
+        editor.foldCode(13);
+    }
   });
 });
 
