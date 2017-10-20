@@ -17,9 +17,12 @@ import onkeyup from './utils/keyBindings';
 import parseTime from './utils/parseTime';
 import hijackConsole from './utils/hijackConsole';
 import { nextExample, previousExample } from './utils/navigation';
+import resizeablePanes from './utils/resize';
+
+resizeablePanes();
 
 /* TODO:
- * Implement Resizing for Editor and Console Windows!
+ * 
  */
 
 export const CODE = {

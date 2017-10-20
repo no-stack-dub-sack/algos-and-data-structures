@@ -1,20 +1,55 @@
 body {
   margin: 0;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  /*overflow: hidden;*/
+  /*flex-direction: column;*/
 }
 
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 400px;
-  box-sizing: border-box;
-  border: 2px solid black;
+.main.right-pane {
+  width: 69.5%;
   height: 100vh;
 }
 
-.sidebar--menu {
-  height: calc(100% - 200px);
+.sidebar.left-pane {
+  top: 0;
+  left: 0;
+  width: 30%;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-right: none;
+  height: 100vh;
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar--menu.top-pane {
   overflow-y: auto;
+  height: 70%;
+  flex: auto;
+  user-select: none;
+}
+
+.sidebar--output.bottom-pane {
+  height: 30%;
+  margin: 0;
+}
+
+.divider {
+  position: relative;
+  background: darkgrey;
+}
+
+.vertical.divider {
+  width: .5%;
+  cursor: col-resize;
+}
+
+.horizontal.divider {
+  height: 1%;
+  cursor: row-resize;
 }
 
 .sidebar--menu--header {
@@ -51,15 +86,10 @@ body {
   margin: 0;
 }
 
-.sidebar--output {
-  height: 200px;
-  margin: 0;
-}
-
 .sidebar--output--messages {
   box-sizing: border-box;
   height: 100%;
-  border: 2px solid rgb(14, 115, 45);
+  /*border: 2px solid rgb(14, 115, 45);*/
   background: rgb(27, 29, 26);
   color: rgb(7, 187, 4);
   font-family: monospace;
@@ -87,13 +117,6 @@ body {
   margin: 0;
   padding: 5px 0 0 8px;
   color: rgb(120, 117, 119);
-}
-
-.main {
-  position: absolute;
-  right: 0;
-  width: calc(100vw - 400px);
-  height: 100vh;
 }
 
 .main--controls {
@@ -130,4 +153,12 @@ body {
 .CodeMirror {
   height: calc(100vh - 50px);
   margin: none;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+  border-left: 1px solid #d5d5d5 !important;
+}
+
+.cm-s-tomorrow-night-eighties .CodeMirror-activeline-background {
+  background: rgba(187, 141, 245, 0.1) !important;
 }

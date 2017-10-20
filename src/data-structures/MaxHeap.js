@@ -10,7 +10,7 @@ export default
         this.heap.push(node);
         this.length++;
 
-        var swap = (node, nodeIdx) => {
+        var swap = (nodeIdx) => {
 
             var parentIdx = Math.floor((nodeIdx - 1) / 2);
             var parent = this.heap[parentIdx];
@@ -18,17 +18,17 @@ export default
             if (parent < node) {
                 this.heap[parentIdx] = node;
                 this.heap[nodeIdx] = parent;
-                swap(node, parentIdx);
+                swap(parentIdx);
             }
         };
 
         if (this.length > 1) {
-            return swap(node, this.length-1);
+            return swap(this.length-1);
         }
     }
 
 
-    remove() {
+    remove(node = this.heap[0]) {
         if (!this.size) {
             return null;
         }
@@ -39,7 +39,7 @@ export default
             this.heap.unshift(this.heap.pop());
         }
 
-        var swap = (node, nodeIdx = 0) => {
+        var swap = (nodeIdx) => {
             var childIdx;
             if (this.size === 2) {
                 childIdx = 1;
@@ -52,14 +52,14 @@ export default
             if (node < this.heap[childIdx]) {
                 this.heap[nodeIdx] = this.heap[childIdx];
                 this.heap[childIdx] = node;
-                return swap(node, childIdx);
+                return swap(childIdx);
             }
 
             return max;
 
         };
 
-        return swap(this.heap[0]);
+        return swap(0);
     }
 
 
