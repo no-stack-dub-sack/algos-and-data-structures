@@ -18,11 +18,16 @@ import parseTime from './utils/parseTime';
 import hijackConsole from './utils/hijackConsole';
 import { nextExample, previousExample } from './utils/navigation';
 import resizeablePanes from './utils/resize';
+import css from './index.css';
+
+if (module.hot) {
+    module.hot.accept();
+}
 
 resizeablePanes();
 
 /* TODO:
- * 
+ *
  */
 
 export const CODE = {
