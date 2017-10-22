@@ -14,7 +14,6 @@ import MaxHeap from './data-structures/MaxHeap';
 import runCode from './utils/runCode';
 import editor from './utils/editorConfig';
 import onkeyup from './utils/keyBindings';
-import parseTime from './utils/parseTime';
 import hijackConsole from './utils/hijackConsole';
 import { nextExample, previousExample } from './utils/navigation';
 import resizeablePanes from './utils/resize';

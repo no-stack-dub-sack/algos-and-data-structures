@@ -151,7 +151,10 @@ function randomizeArray(n) {
     return arr;
 }
 
-
+// parseTime utility
+function parseTime(start, end) {
+    return parseInt(end - start).toString() + 'ms';
+}
 
 // BENCHMARKS:
 
@@ -181,7 +184,7 @@ function randomizeArray(n) {
    let end = window.performance.now();
    console.log('Insertion Sort: ' + parseTime(start, end)); // ~80ms
 }{
-   // Array.sort is implemented w/ merge sort in most engines
+   // Array.sort is implemented w/ a highly optimized merge sort in most engines
    let start = window.performance.now();
    randomizeArray(5000).sort((a, b) => a > b);
    let end = window.performance.now();

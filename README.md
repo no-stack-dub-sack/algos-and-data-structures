@@ -19,9 +19,8 @@ This project uses [CodeMirror](https://codemirror.net/) to embed an editor into 
 - Linked List
 - Doubly Linked List _(coming soon)_
 - Stack _(coming soon)_
-- Queue _(coming soon)_
-- Tree / Binary Tree _(coming soon)_
-- Heap _(coming soon)_
+- Queue
+- Binary Search TreeHeap
 
 ### Algorithm Challenges
 **Easy:**
@@ -39,9 +38,7 @@ This project uses [CodeMirror](https://codemirror.net/) to embed an editor into 
 
 ## To Install/Run:
 - Fork repo, clone locally, and run `npm install` or `yarn install`
-- Install the [live-server](https://github.com/tapio/live-server) package globally
 - In the root directory, run `yarn start` or `npm start`
-- In a new console tab, in the same directory, run `live-server`, which should launch the app on port 8080
 - **\*I will be launching this live soon, once it's complete**
 
 ## \*\*_Challenge!_
