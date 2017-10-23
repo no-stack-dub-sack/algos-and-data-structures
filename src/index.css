@@ -65,6 +65,11 @@ body {
   outline: none;
 }
 
+.sidebar--menu--sub-header:hover,
+.sidebar--menu--detail:hover {
+  background: rgba(39, 145, 152, 0.52);
+}
+
 .sidebar--menu:last-child {
   border: 2px solid black;
 }
@@ -125,29 +130,31 @@ body {
 
 .main--controls--button {
   display: inline-block;
-  box-sizing: border-box;;
-  border: 2px solid black;
-  border-right: none;
-  background: rgb(138, 131, 230);
+  box-sizing: border-box;
+  border: none;
+  border-right: 2px solid black;
+  background: rgba(39, 145, 152, 0.52);
   color: rgb(51, 43, 57);
   height: 100%;
   margin: 0;
   outline: none;
   cursor: pointer;
+  font-family: monospace;
+  font-size: 14px;
+}
+
+.main--controls--button:active {
+  color: white;
+  background: rgb(39, 145, 152);
 }
 
 .main--controls--button.run-code {
-  border-left: none;
   width: 50%;
 }
 
 .main--controls--button.next,
 .main--controls--button.previous {
   width: 25%;
-}
-
-.main--controls--button.next {
-  border-right: 2px solid black;
 }
 
 .CodeMirror {

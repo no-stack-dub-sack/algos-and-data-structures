@@ -1,16 +1,22 @@
+// sorting algos
 import Quicksort from './algorithms/Quicksort';
 import InsertionSort from './algorithms/InsertionSort';
 import SelectionSort from './algorithms/SelectionSort';
 import BubbleSort from './algorithms/BubbleSort';
 import Mergesort from './algorithms/Mergesort';
-import AnagramPalindrome from './algorithms/AnagramPalindrome';
+import HeapSort from './algorithms/HeapSort';
 import SortingBenchmarks from './algorithms/SortingBenchmarks';
 
+// data structures
 import LinkedList from './data-structures/LinkedList';
 import Queue from './data-structures/Queue';
 import BinarySearchTree from './data-structures/BinarySearchTree';
 import MaxHeap from './data-structures/MaxHeap';
 
+// other algos
+import AnagramPalindrome from './algorithms/AnagramPalindrome';
+
+// utilities
 import runCode from './utils/runCode';
 import editor from './utils/editorConfig';
 import onkeyup from './utils/keyBindings';
@@ -40,7 +46,8 @@ export const CODE = {
   LinkedList,
   Queue,
   BinarySearchTree,
-  MaxHeap
+  MaxHeap,
+  HeapSort
 };
 
 // INITIALIZE APP
@@ -67,12 +74,6 @@ selectors.forEach(selector => {
   selector.addEventListener('click', function(e) {
     editor.setValue(CODE[e.target.id]);
     setCurrentNode(e.target.id);
-
-    // fold binary search tree helpers by default
-    if (currentNode === 'BinarySearchTree') {
-        editor.foldCode(5);
-        editor.foldCode(13);
-    }
   });
 });
 
@@ -85,4 +86,9 @@ previous.addEventListener('click', previousExample);
 // UTILITY
 export function setCurrentNode(newNode) {
     currentNode = newNode;
+    // fold binary search tree helpers by default
+    if (currentNode === 'BinarySearchTree') {
+        editor.foldCode(5);
+        editor.foldCode(13);
+    }
 }

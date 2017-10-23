@@ -1,5 +1,5 @@
 export default
-`class MaxHeap {
+`class MinHeap {
     constructor() {
         this.heap = [];
         this.length = 0;
@@ -10,62 +10,74 @@ export default
         this.heap.push(node);
         this.length++;
 
-        var swap = (nodeIdx) => {
+        var swap = (node, nodeIdx) => {
 
             var parentIdx = Math.floor((nodeIdx - 1) / 2);
             var parent = this.heap[parentIdx];
 
-            if (parent < node) {
+            if (parent > node) {
                 this.heap[parentIdx] = node;
                 this.heap[nodeIdx] = parent;
-                swap(parentIdx);
+                swap(node, parentIdx);
             }
         };
 
         if (this.length > 1) {
-            return swap(this.length-1);
+            return swap(node, this.length-1);
         }
     }
 
 
-    remove(node = this.heap[0]) {
+    remove() {
         if (!this.size) {
             return null;
         }
 
-        var max = this.heap.shift();
+        var min = this.heap.shift();
 
         if (this.size > 1) {
             this.heap.unshift(this.heap.pop());
         }
 
-        var swap = (nodeIdx) => {
+        var swap = (node, nodeIdx = 0) => {
             var childIdx;
             if (this.size === 2) {
                 childIdx = 1;
-            } else if (this.heap[2 * nodeIdx + 1] > this.heap[2 * nodeIdx + 2]) {
+            } else if (this.heap[2 * nodeIdx + 1] < this.heap[2 * nodeIdx + 2]) {
                 childIdx = 2 * nodeIdx + 1;
             } else {
                 childIdx = 2 * nodeIdx + 2;
             }
 
-            if (node < this.heap[childIdx]) {
+            if (node > this.heap[childIdx]) {
                 this.heap[nodeIdx] = this.heap[childIdx];
                 this.heap[childIdx] = node;
-                return swap(childIdx);
+                return swap(node, childIdx);
             }
 
             this.length--;
-            return max;
+            return min;
 
         };
 
-        return swap(0);
+        return swap(this.heap[0]);
     }
 
 
     print() {
-      console.log(this.heap);
+      console.log('min heap: ' + JSON.stringify(this.heap));
+      console.log('size: ' + this.size);
+    }
+
+
+    sort() {
+        var sorted = [];
+
+        while (this.size) {
+            sorted.push(this.remove());
+        }
+
+        return sorted;
     }
 
 
@@ -74,19 +86,13 @@ export default
     }
 }
 
-var heap = new MaxHeap();
+var heap = new MinHeap();
 
-heap.insert(7);
-heap.insert(10);
-heap.insert(14);
-heap.insert(32);
-heap.insert(2);
-heap.insert(64);
-heap.insert(37);
+const unsorted = [72,3,19,24,99,45,33,0,2,43,17,19,22,80,100];
+unsorted.forEach(num => heap.insert(num));
 
 heap.print();
-console.log(\`\\nremove \${heap.remove()}\\n\\n\`);
-heap.print();
-console.log(\`\\nremove \${heap.remove()}\\n\\n\`);
-heap.print();
+
+const sorted = heap.sort();
+console.log('\\nheap sort: ' + JSON.stringify(sorted));
 `;
