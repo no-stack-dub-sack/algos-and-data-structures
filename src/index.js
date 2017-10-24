@@ -15,6 +15,7 @@ import MaxHeap from './data-structures/MaxHeap';
 
 // other algos
 import AnagramPalindrome from './algorithms/AnagramPalindrome';
+import NoTwoConsecutiveChars from './algorithms/NoTwoConsecutiveChars';
 
 // utilities
 import runCode from './utils/runCode';
@@ -50,7 +51,8 @@ export const CODE = {
   Queue,
   BinarySearchTree,
   MaxHeap,
-  HeapSort
+  HeapSort,
+  NoTwoConsecutiveChars
 };
 
 // INITIALIZE APP
