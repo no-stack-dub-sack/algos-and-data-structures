@@ -1,4 +1,4 @@
-# Algos & Data Structures ### (work in progress)
+# Algos & Data Structures (work in progress)
 
 __An interactive overview of common sorting algorithms and data structures, implemented in JavaScript. Also includes several other miscellaneous algorithm challenges, similar to those asked in programming interviews. This is intended to help you brush up on your computer science fundamentals, algorithm, and problem solving skills as you prepare for interviews! This is meant as a reference / review only &mdash; if you haven't already learned / solved these problems on your own, I recommend giving them a try before looking at the code!__
 
