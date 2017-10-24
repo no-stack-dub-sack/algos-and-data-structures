@@ -1,6 +1,7 @@
 const path = require("path");
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 module.exports = {
     context: path.join(__dirname, "src"),
@@ -26,6 +27,11 @@ module.exports = {
                         plugins: [ require('babel-plugin-transform-object-rest-spread') ]
                     }
                 }
+            },
+            {
+                test: /\.ico$|\.png$/,
+                include: path.resolve(__dirname, "src"),
+                use: 'file-loader?name=[name].[ext]'
             }
         ]
     },
@@ -33,8 +39,6 @@ module.exports = {
         extensions: ['.js']
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            template: './index.html'
-        })
+        new HtmlWebpackPlugin({ template: './index.html' })
     ]
 };

@@ -23,7 +23,10 @@ import onkeyup from './utils/keyBindings';
 import hijackConsole from './utils/hijackConsole';
 import { nextExample, previousExample } from './utils/navigation';
 import resizeablePanes from './utils/resize';
-import css from './index.css';
+
+// assets
+require('./index.css');
+require('./favicon.png');
 
 if (module.hot) {
     module.hot.accept();
