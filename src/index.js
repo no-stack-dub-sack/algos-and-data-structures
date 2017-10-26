@@ -12,6 +12,7 @@ import LinkedList from './data-structures/LinkedList';
 import Queue from './data-structures/Queue';
 import BinarySearchTree from './data-structures/BinarySearchTree';
 import MaxHeap from './data-structures/MaxHeap';
+import Stack from './data-structures/Stack';
 
 // other algos
 import AnagramPalindrome from './algorithms/AnagramPalindrome';
@@ -36,7 +37,7 @@ if (module.hot) {
 resizeablePanes();
 
 /* TODO:
- *
+ * homoginize JSDoc style comments across data structures and algos
  */
 
 export const CODE = {
@@ -52,7 +53,8 @@ export const CODE = {
   BinarySearchTree,
   MaxHeap,
   HeapSort,
-  NoTwoConsecutiveChars
+  NoTwoConsecutiveChars,
+  Stack
 };
 
 // INITIALIZE APP

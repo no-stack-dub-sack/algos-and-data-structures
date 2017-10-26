@@ -1,16 +1,9 @@
 export default
 `/**
- * Singly-Linked List with the following functionality:
-    * head => first el in List
-    * size => size of List
-    * add => adds element to List
-    * addAt => adds element at specific index
-    * remove => removes element from List
-    * removeAt => removes element at specific index
-    * indexOf => index of a given element
-    * elementAt => elementAt at specific index
-    * isEmpty => true || false
- */
+  * @class Node
+  * @property {number|string} value The node's value
+  * @property {object} next The next node
+  */
 
 class Node {
     constructor(el) {
@@ -18,6 +11,21 @@ class Node {
         this.next = null;
     }
 }
+
+/**
+ * @class Singly-Linked List data structure
+ * @property {object} headNode Root element of collection
+ * @property {number} length The length of the list
+ * @function head @return {object} root element of collection
+ * @function size @return size of List
+ * @function add @param {number|string} el Adds element to List
+ * @function addAt @param {number} index @param {number|string} el Adds element at specific index
+ * @function remove @param {number|string} el @return {number|string} removed element
+ * @function removeAt @param {number} index @return {number|string} removed element at specific index
+ * @function indexOf @param {number|string} el @return {number} index of a given element
+ * @function elementAt @param {number} index @return {number|string} elementAt at specific index
+ * @function isEmpty @return {bool}
+ */
 
 class LinkedList {
     constructor() {
@@ -33,7 +41,7 @@ class LinkedList {
 
     get size() {
         return length;
-    }
+    }@function
 
 
     add(el) {
@@ -167,6 +175,7 @@ class LinkedList {
     }
 }
 
+// example usage:
 
 var list = new LinkedList();
 

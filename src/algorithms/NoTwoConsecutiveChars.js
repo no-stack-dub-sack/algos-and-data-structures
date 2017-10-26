@@ -13,7 +13,13 @@ export default
 // Input: AAAB
 // Output: false
 
-function noTwoRepeatingChars(str) {
+/**
+ * @function noTwoConsecutiveChars
+ * @param {string} str The String to operate on
+ * @return {string|bool} Rearranged string or false
+ */
+
+function noTwoConsecutiveChars(str) {
 
     var freqTable = {};
 
@@ -57,10 +63,10 @@ function noTwoRepeatingChars(str) {
     return getNextChar();
 }
 
-console.log(noTwoRepeatingChars('aaba'));
-console.log(noTwoRepeatingChars('aabba'));
-console.log(noTwoRepeatingChars('aaaaaaabbbbcc'));
-console.log(noTwoRepeatingChars('aaabaaabbbbbbbbbccccbbcbsd'));
-console.log(noTwoRepeatingChars('aaabaaabbbbbbbbbbccccbbcbsd'));
-console.log(noTwoRepeatingChars('aaabaaabbbbbbbbbbbccccbbcbsd'));
+console.log(noTwoConsecutiveChars('aaba'));
+console.log(noTwoConsecutiveChars('aabba'));
+console.log(noTwoConsecutiveChars('aaaaaaabbbbcc'));
+console.log(noTwoConsecutiveChars('aaabaaabbbbbbbbbccccbbcbsd'));
+console.log(noTwoConsecutiveChars('aaabaaabbbbbbbbbbccccbbcbsd'));
+console.log(noTwoConsecutiveChars('aaabaaabbbbbbbbbbbccccbbcbsd'));
 `;
