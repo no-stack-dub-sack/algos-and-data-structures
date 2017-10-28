@@ -17,12 +17,13 @@ The live site is currently running here: https://upbeat-pie.surge.sh/
 - Sorting Algorithm Benchmarks
 
 ### Data Structures:
+- Stack
+- Queue
 - Linked List
 - Doubly Linked List _(coming soon)_
-- Stack _(coming soon)_
-- Queue
 - Binary Search Tree
 - Max Heap
+- Hash Table
 
 ### Algorithm Challenges
 **Easy:**

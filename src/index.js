@@ -13,6 +13,7 @@ import Queue from './data-structures/Queue';
 import BinarySearchTree from './data-structures/BinarySearchTree';
 import MaxHeap from './data-structures/MaxHeap';
 import Stack from './data-structures/Stack';
+import HashTable from './data-structures/HashTable';
 
 // other algos
 import AnagramPalindrome from './algorithms/AnagramPalindrome';
@@ -54,7 +55,8 @@ export const CODE = {
   MaxHeap,
   HeapSort,
   NoTwoConsecutiveChars,
-  Stack
+  Stack,
+  HashTable
 };
 
 // INITIALIZE APP
