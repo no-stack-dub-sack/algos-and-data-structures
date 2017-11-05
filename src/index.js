@@ -9,6 +9,7 @@ import SortingBenchmarks from './algorithms/SortingBenchmarks';
 
 // data structures
 import LinkedList from './data-structures/LinkedList';
+import DoublyLinkedList from './data-structures/DoublyLinkedList';
 import Queue from './data-structures/Queue';
 import BinarySearchTree from './data-structures/BinarySearchTree';
 import MaxHeap from './data-structures/MaxHeap';
@@ -50,6 +51,7 @@ export const CODE = {
   AnagramPalindrome,
   SortingBenchmarks,
   LinkedList,
+  DoublyLinkedList,
   Queue,
   BinarySearchTree,
   MaxHeap,
